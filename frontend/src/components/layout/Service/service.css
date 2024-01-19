@@ -1,0 +1,16 @@
+.service-container{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:  3vmax auto;
+}
+.latest-news{
+    width: 30%;
+}
+.careeer-opportunities{
+    width: 30%;
+}
+.event-calendar{
+    width: 30%;
+}

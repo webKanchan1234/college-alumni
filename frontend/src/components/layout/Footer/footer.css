@@ -1,0 +1,68 @@
+.footer-container{
+    width: 90%;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin: 1vmax auto;
+}
+.footer-left{
+    width: 25%;
+}
+.footer-left img{
+    width: 40%;
+}
+.footer-mid{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+.footer-mid-alumni, .footer-mid-university p, .footer-mid-account p{
+    text-transform: uppercase;
+    color: black;
+}
+.footer-mid-alumni-icon{
+    display: block;
+}
+#link{
+    text-decoration: none;
+    color: rgb(54, 53, 53);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9vmax;
+    transition: 0.5s;
+}
+#link:hover{
+    color: rgb(255, 213, 0);
+}
+.footer-right{
+    width: 25%;
+}
+.footer-right-link{
+    background-color: rgb(213, 179, 7);
+    text-align: center;
+    padding: 0.5vmax 1vmax;
+}
+.footer-right-link1{
+    color: white;
+    text-decoration: none;
+}
+.right-icons{
+    margin-top: 1vmax;
+}
+.icons{
+    font-size: 2vmax !important;
+    margin: 0.5vmax;
+    color: black;
+    cursor: pointer;
+}
+.hr{
+    height: 2px;
+    width: 90%;
+    margin: auto;
+    padding: 1vmax 0;
+}
+#copy{
+    text-align: center;
+    color: rgb(105, 102, 102);
+}

@@ -1,0 +1,38 @@
+.news-container{
+    height: 400px;
+    overflow-y: auto;
+}
+.news-box-link{
+    text-decoration: none;
+    color: black;
+}
+.news-box{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-bottom: 1vmax;
+    overflow-y: auto;
+}
+.news-image{
+    width: 35%;
+    margin-right: 1vmax;
+}
+.news-image img{
+    width: 100%;
+}
+.news-details h3{
+    font-size: 1.2vmax;
+}
+.news-details p{
+    font-size: 1vmax;
+}
+.news-link-div{
+    width: 95%;
+    background-color: rgb(130, 126, 126);
+    text-align: center;
+    padding: 0.7vmax 2vmax;
+}
+.news-link{
+    color: black;
+    text-decoration: none;
+}

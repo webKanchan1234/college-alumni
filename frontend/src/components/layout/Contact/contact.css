@@ -1,0 +1,44 @@
+.contact-map{
+    margin-top: 1vmax;
+    margin-bottom: 5vmax;
+    width: 100%;
+    height: 500px;
+}
+.contact-map iframe{
+    width: 100%;
+    height: 100%;
+}
+.address{
+    width: 80%;
+    margin: 2vmax auto;
+    display: flex;
+    justify-content: space-around;
+}
+.address-visit{
+    width: 40%;
+}
+.address-touch{
+    width: 40%;
+}
+.contact-form{
+    width: 100%;
+}
+.form{
+    width: 70%;
+    margin: 3vmax auto;
+}
+.form h3{
+    letter-spacing: 0.2vmax;
+    color: rgb(56, 55, 55);
+}
+.form input {
+    width: 90%;
+    margin: 1vmax auto;
+    padding: 0.9vmax;
+}
+.btn-send{
+    background-color: rgb(215, 170, 5);
+    padding: 0.5vmax 2vmax ;
+    border: none;
+    color: white;
+}
