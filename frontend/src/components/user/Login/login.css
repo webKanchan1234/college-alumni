@@ -1,0 +1,28 @@
+.login{
+    width: 30%;
+    margin: 2vmax auto;
+    padding: 2vmax 0;
+}
+.login h2{
+    padding: 3vmax 0;
+}
+.form-btn{
+    display: flex;
+    justify-content: space-between;
+}
+#login-btn{
+    background-color: rgb(213, 179, 7);
+    border-radius: 0px;
+    width: 49%;
+    border: none;
+}
+.register-btn{
+    background-color: rgb(177, 177, 176);
+    width: 49%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#register-btn{
+    text-decoration: none;
+}

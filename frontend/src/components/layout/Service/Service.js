@@ -1,14 +1,14 @@
 import React from 'react'
 import "./service.css"
-import News from '../News/News'
 import Career from '../Career/Career'
 import Event from '../Event/Event'
+import LatestNews from '../LatestNews/LatestNews'
 
 const Service = () => {
   return (
     <div className='service-container'>
         <div className="latest-news">
-            <News/>
+            <LatestNews/>
         </div>
         <div className="careeer-opportunities">
           <Career/>

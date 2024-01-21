@@ -1,9 +1,9 @@
 import React from 'react'
-import "./event.css"
+import "./latestnews.css"
 import { Link } from "react-router-dom"
 
-const Event = () => {
-    const latestnews = [
+const LatestNews = () => {
+    const news = [
         {
             image: "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg",
             heading: "Objectives Should Be Stated Clearly",
@@ -47,11 +47,11 @@ const Event = () => {
     ]
     return (
         <>
-            <div className='latestlatestnews'>
-                <h2>Event Calendar</h2>
+            <div className='latestnews'>
+                <h2>Latest News</h2>
                 <div className="latestnews-container">
                     {
-                        latestnews.map((data, key) => {
+                        news.map((data, key) => {
                             return (
                                 <Link to="" className='latestnews-box-link'>
                                     <div className="latestnews-box">
@@ -70,11 +70,11 @@ const Event = () => {
                 </div>
 
             </div>
-            <div className="latestnews-link-div">
-                <Link to="" className='latestnews-link'>View All latestnews</Link>
+            <div className="news-link-div">
+                <Link to="" className='news-link'>View All News</Link>
             </div>
         </>
     )
 }
 
-export default Event
+export default LatestNews

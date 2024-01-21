@@ -26,10 +26,10 @@ const Footer = () => {
             <Link to="" id='link'>Events</Link>
             </div>
             <div className="footer-mid-alumni-icon">
-            <Link to="" id='link'>Gallery</Link>
+            <Link to="/gallery" id='link'>Gallery</Link>
             </div>
             <div className="footer-mid-alumni-icon">
-            <Link to="" id='link'>News</Link>
+            <Link to="/news" id='link'>News</Link>
             </div>
           </div>
         </div>
@@ -37,7 +37,7 @@ const Footer = () => {
           <p>Alumni</p>
           <div className="footer-mid-alumni-icon-box">
             <div className="footer-mid-alumni-icon">
-              <Link to="" id='link'>Contacts</Link>
+              <Link to="/contact" id='link'>Contacts</Link>
             </div>
             <div className="footer-mid-alumni-icon">
               <Link to="" id='link'>About us</Link>
@@ -67,10 +67,6 @@ const Footer = () => {
             <Link to="" id='link'>Downloads</Link>
             </div>
           </div>
-          
-          
-          
-
         </div>
       </div>
       <footer className="footer-right">

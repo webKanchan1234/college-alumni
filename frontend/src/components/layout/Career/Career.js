@@ -3,7 +3,7 @@ import "./career.css"
 import { Link } from "react-router-dom"
 
 const Career = () => {
-    const news = [
+    const latestnews = [
         {
             image: "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg",
             heading: "Objectives Should Be Stated Clearly",
@@ -47,18 +47,18 @@ const Career = () => {
     ]
     return (
         <>
-            <div className='news'>
+            <div className='latestnews'>
                 <h2>Career Opportunities</h2>
-                <div className="news-container">
+                <div className="latestnews-container">
                     {
-                        news.map((data, key) => {
+                        latestnews.map((data, key) => {
                             return (
-                                <Link to="" className='news-box-link'>
-                                    <div className="news-box">
-                                        <div className="news-image">
+                                <Link to="" className='latestnews-box-link'>
+                                    <div className="latestnews-box">
+                                        <div className="latestnews-image">
                                             <img src={data.image} alt={data.heading} />
                                         </div>
-                                        <div className="news-details">
+                                        <div className="latestnews-details">
                                             <h3>{data.heading}</h3>
                                             <p>{data.desc}</p>
                                         </div>
@@ -70,8 +70,8 @@ const Career = () => {
                 </div>
 
             </div>
-            <div className="news-link-div">
-                <Link to="" className='news-link'>View All News</Link>
+            <div className="latestnews-link-div">
+                <Link to="" className='latestnews-link'>View All latestnews</Link>
             </div>
         </>
     )

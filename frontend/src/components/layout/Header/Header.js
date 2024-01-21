@@ -17,23 +17,21 @@ function Header() {
               <NavDropdown.Item href="/directory">
                 Directory
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.1">Gallery</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item href="/gallery">Gallery</NavDropdown.Item>
+              <NavDropdown.Item href="/news">
                 News
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.1">Typography</NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title="Programms & Events" id="basic-nav-dropdown" className='mx-3'>
-              <NavDropdown.Item href="#action/3.1">Contact</NavDropdown.Item>
+              <NavDropdown.Item href="/sponsorship">Sponsorship</NavDropdown.Item>
+              <NavDropdown.Item href="/members">Latest member</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Dictionary
+                Alumni Profile
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.1">Gallery</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                News
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.1">Typography</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">Alumni Login</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">Alumni Regiister</NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title="Alumni Stories" id="basic-nav-dropdown" className='mx-3'>
@@ -48,6 +46,8 @@ function Header() {
               <NavDropdown.Item href="#action/3.1">Typography</NavDropdown.Item>
             </NavDropdown>
 
+            
+
             <NavDropdown title="Career Opportunities" id="basic-nav-dropdown" className='mx-3'>
               <NavDropdown.Item href="#action/3.1">Contact</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -61,10 +61,10 @@ function Header() {
 
             </NavDropdown>
           </Nav>
-          <Nav.Link href="#" className='mx-2' >
+          <Nav.Link href="/login" className='mx-2' >
             Sign in
           </Nav.Link>
-          <Nav.Link href="#" className='mx-2'>
+          <Nav.Link href="/register" className='mx-2'>
             Sign up
           </Nav.Link>
         </Navbar.Collapse>
