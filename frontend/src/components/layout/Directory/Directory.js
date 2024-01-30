@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React,{useEffect} from 'react';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -7,6 +7,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
+import {useDispatch,useSelector} from "react-redux"
+import { allUsers } from '../../../action/userAction';
 
 const columns = [
   { id: 'name', label: 'Name', minWidth: 70 },
@@ -105,6 +107,10 @@ const columns = [
 // ];
 
 export default function Directory() {
+  const dispatch = useDispatch()
+  const {users,loading}  = useSelector(state=>state.allUsers)
+  console.log(users)
+
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -116,6 +122,11 @@ export default function Directory() {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
+
+  useEffect(() => {
+    dispatch(allUsers())
+  }, [])
+  
 
   return (
     <Paper sx={{ width: '80%', overflow: 'hidden',margin:"4vmax auto" }}>

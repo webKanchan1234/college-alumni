@@ -14,7 +14,8 @@ const userSchema = new mongoose.Schema({
     },
     password:{
         type:String,
-        required:[true,"Password is Required field"]
+        required:[true,"Password is Required field"],
+        minLength:[8,"Min password lenth is 8 character"]
     },
     role:{
         type:String,
@@ -40,6 +41,9 @@ const userSchema = new mongoose.Schema({
     },
     resume:{
         // type:File
+    },
+    avatar:{
+        type:String
     }
 })
 

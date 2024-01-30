@@ -1,0 +1,1 @@
+export const all_users="/api/v1/users"
