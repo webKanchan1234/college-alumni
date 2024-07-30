@@ -6,8 +6,7 @@ import axios from "axios"
 export const allUsers = ()=> async(dispatch)=>{
     try {
         dispatch({type:ALL_USERS_REQUEST})
-        const {data} = await axios.get(all_users)
-        // console.log(data)
+        const {data} = await axios.get("/api/v1/users")
         dispatch({
             type:ALL_USERS_SUCCESS,
             payload:data.users
