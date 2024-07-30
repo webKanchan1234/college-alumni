@@ -41,6 +41,7 @@ jobs:
           ${{ runner.os }}-node-
 
     - name: Install dependencies for backend
+      working-directory: ./backend
       run: npm ci
 
     - name: Install dependencies for frontend
@@ -55,5 +56,3 @@ jobs:
       run: |
         touch backend/config/config.env
         echo "${{ secrets.PROD_ENV_FILE }}" > backend/config/config.env
-
-  
