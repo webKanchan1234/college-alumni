@@ -41,7 +41,6 @@ jobs:
           ${{ runner.os }}-node-
 
     - name: Install dependencies for backend
-      working-directory: ./backend
       run: npm ci
 
     - name: Install dependencies for frontend
