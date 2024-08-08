@@ -1,52 +1,30 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
-name: Node.js CI/CD
+name: Deploy MERN App
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main # or your default branch
 
 jobs:
-  build:
+  deploy:
     runs-on: self-hosted
-    strategy:
-      matrix:
-        node-version: [22.x]
 
     steps:
-    - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # or your Node.js version
 
-    - name: Cache backend dependencies
-      uses: actions/cache@v3
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/backend/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+      - name: Install dependencies for backend
+        run: npm install
 
-    - name: Cache frontend dependencies
-      uses: actions/cache@v3
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/frontend/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+      - name: Install dependencies for frontend
+        working-directory: ./frontend
+        run: npm install
 
-    - name: Install dependencies for backend
-      run: npm ci
-
-    - name: Install dependencies for frontend
-      working-directory: ./frontend
-      run: npm ci
-
-    - name: Create config file for backend
-      run: |
-        touch backend/config/config.env
-        echo "${{ secrets.PROD_ENV_FILE }}" > backend/config/config.env
+      - name: Build frontend
+        working-directory: ./frontend
+        run: npm run build
